@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* { 
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --text-color: #fff;
+    --border-color: rgba(255, 255, 0.1);
+    --background-header: #0c0c14;
+    --background-main: #10101a;
+    --details:#2faebf;
+
+}
+
+#headerH {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--background-main);
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+    z-index: 3;
+    display: none;
+}
+
+#headerH div {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#botao-menu {
+    display: none;
+}
+
+label[for="botao-menu"] {
+    cursor: pointer;
+    background: var(--details);
+    font-size: 30px;
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#headerV{
+    position: fixed;
+    width: 250px;
+    height: 100%; 
+    background: var(--background-header);
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#headerVCircle {
+    background: var(--details);
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    position: absolute;
+    top: -180px;
+    left: -50px;
+    z-index: -1;
+}
+
+#profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 65px 0 0;
+}
+
+#profilePhoto{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--text-color);
+    background: url(imagens/profile-photo.png) no-repeat center center/cover;
+}
+
+#profileName {
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+#navMenu {
+    margin: 45px 0;
+}
+
+#navMenu a {
+    display:flex;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#navMenu ion-icon {
+    margin-right: 10px;
+}
+
+#navMenu a:nth-child(n+6){
+    border-bottom: none;
+}
+
+#navMenu a:hover{
+    color: var(--details);
+    box-shadow: inset 3px 0 0 var(--details);
+}
+
+#navSocial {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 250px;
+    padding: 12px 0;
+}
+
+#navSocial a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 50%;
+    transition: background 0.2s;
+    padding: 8px;
+}
+
+#navSocial a:hover {
+    background: var(--details);
+}
+
+main {
+    position: relative;
+    margin-left: 250px;
+    background: var(--background-main);
+    min-height: 100vh;
+    height: auto;
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+}
+
+section {
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 90%;
+}
+
+section a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    width: 160px;
+    background: var(--details);
+    box-shadow: 3px 3px 0px var(--text-color);
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+section p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+section#sectionInicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#sectionInicio>div{
+    width: 49%;
+    min-width: 300px;
+}
+
+section#sectionInicio h1 {
+    font: 65px;
+    margin-bottom: 20px;
+}
+
+section#sectionInicio img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--text-color);
+}
+
+section#sobreMim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#sobreMim>div {
+    width: 49%;
+    min-width: 300px;
+}
+
+#sobreMimGradeFotos {
+    display: flex;
+    gap: 20px;
+}
+
+.sobreMimFotos {
+    margin-bottom: 20px;
+}
+
+#sobreMimFotosColuna2 {
+    padding-top: 50px;
+}
+
+section#sobreMim img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+section#sobreMim h2 {
+    font-weight: bolder;
+}
+
+#sobreMimRodape {
+    display: flex;
+    gap: 10px;
+}
+
+.sobreMimQuantidade {
+    display: flex;
+    width: 160px;
+}
+
+.sobreMimQuantidade p:first-child {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.sobreMimQuantidade p:last-child {
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+section#servico #servicoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 49%;
+    min-width: 300px;
+    background: var(--background-header);
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+.card:hover {
+    background: var(--details);
+}
+
+section#servico h2 {
+    font-weight: bolder;
+}
+
+/* ################ Portfólio ################## */
+
+
+
+@media (max-width: 1200px) {
+    #headerH {
+        display: flex;
+    }
+    
+    #headerV {
+        margin-left: -250px;
+        transition: all 0.4s;
+        top: 0;
+    }
+    main {
+        margin-left: 0;
+        margin-top: 70px;
+    }
+    #botao-menu:checked ~ #headerV {
+        margin-left: 0;
+    }
+
+    section#servico h2 {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 690px) {
+    section#sectionInicio {
+        justify-content: center;
+    }
+    section#sectionInicio #inicioDescricao{
+        width: 100%;
+    }
+
+    section#sectionInicio #inicioFoto {
+        margin: 50px 0 auto;
+    }
+
+    section#sobreMim #sobreMimTexto {
+        width: 100%;
+    }
+
+    section#sobreMim #sobreMimGradeFotos {
+        margin: 50px 0 auto;
+        width: 100%;
+    }
+    
+    section#servico .card {
+        width: 100%;
+    }
+
+    .portfolioCardImg {
+        width: 100%;
+        margin-bottom: 200px;
+    }
+}
