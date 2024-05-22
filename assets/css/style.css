@@ -152,6 +152,8 @@ label[for="botao-menu"] {
     background: var(--details);
 }
 
+/* ################ Início ################## */
+
 main {
     position: relative;
     margin-left: 250px;
